@@ -9,7 +9,7 @@
 using namespace cv;
 using namespace std;
 
-mutex M1,M2;
+mutex M1, M2;
 
 void open_camera(shared_ptr<Mat> frame)
 {
@@ -51,7 +51,7 @@ void open_camera(shared_ptr<Mat> frame)
 
 void show_screen(shared_ptr<Mat> frame)
 {
-    
+
     string window_name = "My Camera Feed";
     namedWindow(window_name); // create a window called "My Camera Feed"
     while (true)
@@ -86,6 +86,7 @@ void show_screen(shared_ptr<Mat> frame)
 }
 int main(int argc, char *argv[])
 {
+    //The modified code
     M2.lock();
     shared_ptr<Mat> frame = make_shared<Mat>();
     thread camera(open_camera, frame);
