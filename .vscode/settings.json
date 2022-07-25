@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "chrono": "cpp",
+        "functional": "cpp",
+        "new": "cpp",
+        "type_traits": "cpp",
+        "condition_variable": "cpp"
+    }
+}
